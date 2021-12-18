@@ -1,0 +1,527 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@font-face {
+  font-family: "Shrikhand";
+  src: url("Shrikhand-Regular.ttf") format("truetype");
+  font-family: "Roboto";
+  src: url("Roboto-Regular.ttf") format("truetype");
+}
+
+body {
+  font-family: "Roboto";
+  text-align: center;
+  margin: 0;
+}
+
+/* ==============================================================================
+                                    CODE PAGE
+   ============================================================================== */
+
+header {
+  padding: 30px 0 30px 0;
+}
+
+.fa-arrow-left {
+  padding-top: 10px;
+  color: black;
+  font-size: large;
+  position: absolute;
+  left: 35px;
+}
+
+.logo {
+  height: 60px;
+}
+
+.PhotoResto {
+  width: 100%;
+  height: 560px;
+  object-fit: cover;
+}
+
+
+section {
+  background-color: #f7f7f7;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: -80px;
+  border-radius: 40px 40px 0 0;
+}
+
+h3 {
+  width: 30px;
+  margin-block-start: 25px;
+  margin-block-end: -20px;
+  text-align: left;
+  font-weight: lighter;
+  margin-left: 40px;
+  border-bottom: 3px #99e2d0 solid;
+  margin-right: 870px;
+  margin-bottom: 5px;
+}
+
+h4 {
+  margin-block-start: 10px;
+  margin-block-end: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+h5 {
+  margin-block-start: 5px;
+  margin-block-end: 10px;
+  font-weight: 100;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.Choix {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 20px;
+  margin: 7px 25px 5px 25px;
+  text-align: left;
+  padding: 0 20px 0px 20px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.hidden {
+  overflow: hidden;
+}
+
+.Argumentsprix {
+  font-size: x-large;
+  position: relative;
+}
+
+/* ==============================================================================
+                                    CODE ANIMATION
+   ============================================================================== */
+.Entree {
+  animation: fadein 7s;
+  -moz-animation: fadein 7s; /* Firefox */
+  -webkit-animation: fadein 7s; /* Safari et Chrome */
+  -o-animation: fadein 7s; /* Opera */
+}
+.Plats {
+  animation: fadein 10s;
+  -moz-animation: fadein 10s; /* Firefox */
+  -webkit-animation: fadein 10s; /* Safari et Chrome */
+  -o-animation: fadein 10s; /* Opera */
+}
+.Desserts {
+  animation: fadein 15s;
+  -moz-animation: fadein 15s; /* Firefox */
+  -webkit-animation: fadein 15s; /* Safari et Chrome */
+  -o-animation: fadein 15s; /* Opera */
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadein {
+  /* sur Firefox */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadein {
+  /* sur Safari et Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadein {
+  /* sur Opera */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes animheart {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.fa-heart {
+  position: absolute;
+  margin-left: 820px;
+  top: 100px;
+  width: 10%;
+}
+@keyframes animheart {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.fa-heart:hover {
+  -webkit-animation: animheart 1s ease-in-out;
+  animation: animheart 1s ease-in-out;
+  display: inline-block;
+
+  background: linear-gradient(
+    to left,
+    #9356dc,
+    #b35cdc,
+    #cf64dc,
+    #e86edb,
+    #ff79da
+  );
+  background: -webkit-linear-gradient(
+    to left,
+    #9356dc,
+    #b35cdc,
+    #cf64dc,
+    #e86edb,
+    #ff79da
+  );
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99e2d0;
+  width: 70px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-right: -120px;
+}
+
+article:hover .icon {
+  -webkit-animation: slide-validation 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: slide-validation 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation-delay: 0.1s;
+}
+
+@keyframes slide-validation {
+  0% {
+    margin-right: -120px;
+  }
+  100% {
+    margin-right: -20px;
+  }
+}
+
+@keyframes slide-unvalidation {
+  0% {
+    margin-right: -20px;
+  }
+  100% {
+    margin-right: -120px;
+  }
+}
+
+article .icon {
+  -webkit-animation: slide-unvalidation 0.8s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-unvalidation 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation-delay: 0.1s;
+}
+.fa-check-circle {
+  font-size: 1.5em;
+  color: #fff;
+  transition: transform 500ms ease-in-out;
+}
+article:hover .fa-check-circle {
+  font-size: 1.5em;
+  color: #fff;
+  transition: transform 500ms ease-in-out;
+  -webkit-animation: rotateicon 0.8s ease-in-out both;
+  animation: rotateicon 0.8s ease-in-out both;
+}
+@keyframes rotateicon {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+/* __________________________________________________________________________________ */
+
+
+.Argumentsprix {
+  display: flex;
+  justify-content: space-between;
+  font-size: x-large;
+}
+.prix {
+  padding-left: 10px;
+  padding-right: 45px;
+  padding-top: 20px;
+}
+.Commander {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  background: linear-gradient(#ff79da, #ae76e1);
+  background-color: #ff79da;
+  border-radius: 120px;
+  text-decoration-color: #f7f7f7;
+  text-decoration-line: none;
+  color: white;
+  padding: 20px 80px 20px 80px;
+  font-size: 15px;
+  margin-left: 300px;
+  margin-right: 300px;
+  opacity: 1;
+}
+.Commander:hover {
+  box-shadow: 10px 10px 14px #aaa;
+  opacity: 0.8;
+}
+.Titre {
+  font-family: "Shrikhand", cursive;
+  font-style: italic;
+  font-size: 62px;
+  text-align: left;
+  margin-left: 30px;
+}
+
+
+/* Code pour Footer */
+footer {
+  text-align: left;
+  color: white;
+  background-color: #504d4d;
+  padding: 40px;
+}
+
+.logofooter {
+  filter: invert(100%);
+  margin-bottom: 60px;
+}
+.Proposerunrestaurant {
+  margin-bottom: 30px;
+}
+.Devenirpartenaire {
+  margin-bottom: 30px;
+}
+.Mentions {
+  margin-bottom: 30px;
+}
+.mail {
+  margin-bottom: 60px;
+}
+
+.fa-utensils {
+  margin-right: 20px;
+}
+
+.fa-hands-helping {
+  margin-right: 6px;
+}
+
+.a {
+  text-decoration: none;
+}
+
+.mail {
+  text-decoration: none;
+  color: white;
+}
+
+/* ==============================================================================
+                                    MEDIAS QUERIES
+   ============================================================================== */
+
+@media screen and (min-width: 576px) /* FORMAT TABLETTE */ {
+  .PhotoResto {
+    width: 100%;
+  }
+  .fa-heart:before {
+    display: none;
+}
+  .Commander {
+    margin-right: 250px;
+  }
+}
+                                                /* FORMAT DESKTOP  */
+
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: x-large;
+  }
+  .fa-heart:before {
+    display: none;
+}
+  .fa-heart:hover {
+    animation: animheart 3s ease-in-out;
+    display: inline-block;
+    opacity: 1;
+    background: linear-gradient(
+      to left,
+      #9356dc,
+      #b35cdc,
+      #cf64dc,
+      #e86edb,
+      #ff79da
+    );
+    background: -webkit-linear-gradient(
+      to left,
+      #9356dc,
+      #b35cdc,
+      #cf64dc,
+      #e86edb,
+      #ff79da
+    );
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+  }
+
+  h3 {
+    margin-right: auto;
+  }
+
+  .PhotoResto {
+    width: 100%;
+    height: 660px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .fa-heart {
+    margin-left: 412px;
+    top: 217px;
+  }
+
+  h4 {
+    font-size: xx-large;
+    top: 0px;
+  }
+  h5 {
+    font-size: x-large;
+  }
+  .logo {
+    height: auto;
+  }
+  .PhotoResto {
+    height: 350px;
+  }
+  .Titre {
+    font-size: 18px;
+    margin-left: 56px;
+  }
+  .fa-heart {
+    margin-left: 280px;
+    top: 30px;
+  }
+  h4 {
+    font-size: medium;
+  }
+  h5 {
+    font-size: medium;
+  }
+  h3 {
+    font-size: large;
+  }
+  .Commander {
+    font-size: large;
+    padding:5px 10px 10px 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  
+  footer {
+    /*  position: relative;
+    top: -250px;*/
+    height: 420px;
+  }
+}
+
+@media screen and (min-width: 310px) and (max-width: 330px) {
+  a {
+    margin-right: 30px;
+  }
+  section {
+    width: 342px;
+  }
+  footer {
+    width: 260px;
+    height: 265px;
+  }
+}
+@media screen and (min-width: 360px) and (max-width: 380px) {
+  section {
+    width: 375px;
+  }
+  .Titre {
+    margin-left: 33px;
+  }
+  .Commander {
+    width: 140px;
+  }
+  footer {
+    height: 300px;
+    width: 295px;
+  }
+}
+@media screen and (min-width: 410px) and (max-width: 420px) {
+  section {
+    width: 410px;
+  }
+}
+
+@media screen and (min-width: 275px) and (max-width: 285px) {
+  .logo {
+    margin-left: 70px;
+  }
+  section {
+    width: 280px;
+  }
+
+  .Titre {
+    margin-left: 20px;
+    margin-top: 15px;
+  }
+
+  .fa-heart {
+    top: 45px;
+  }
+  .Commander {
+    margin-left: 65px;
+  }
+  h3 {
+    width: 90px;
+    margin-right: 0px;
+  }
+}
